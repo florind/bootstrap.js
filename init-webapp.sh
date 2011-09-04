@@ -10,7 +10,7 @@ if [ $# == 0 ]; then
   echo "Usage: init-webapp.sh target-dir <joyent|heroku> <Joyent-node-name>"
   echo "Examples: "
   echo "  ./init-webapp.sh /tmp/app Heroku"
-  echo "  ./init-webapp.sh /tmp/app Joyent mymachine"
+  echo "  ./init-webapp.sh /tmp/app Joyent my-awesome-node"
   exit 1
 fi
 
