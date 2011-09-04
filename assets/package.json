@@ -1,0 +1,12 @@
+{
+  "name": "upload.js",
+  "version": "0.0.1",
+  "scripts": { "start": "node web.js" },
+  "dependencies": {
+    "express": "2.2.0",
+    "jade": "0.14.2"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  }
+}
