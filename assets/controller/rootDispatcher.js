@@ -14,3 +14,10 @@ server.get('/', function(req, res) {
     'title': 'Bootstraping done'
   });
 });
+
+server.get('/health', function(req, res) {
+  //some smart checks should go here
+  res.send('{status: "OK"}', {
+    'Content-Type' : 'text/json'
+  }, 200);
+});
