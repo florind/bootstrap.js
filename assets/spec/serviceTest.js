@@ -1,3 +1,5 @@
+var globalTestCount = 2;  //total number of tests. Update if the count changes!!
+
 var http = require('http'),
   server = require('../controller/rootDispatcher.js').server;
 
@@ -11,7 +13,6 @@ exports['GET nonexistent file should return 404 Not Found'] =function(test) {
   req.on('response', function(res) {
     res.on('end', function() {
       test.equal(res.statusCode, 404);
-
       cleanup();
       test.done();
     });
@@ -24,7 +25,6 @@ exports['GET /health should return OK'] =function(test) {
   req.on('response', function(res) {
     res.on('end', function() {
       test.equal(res.statusCode, 200);
-
       cleanup();
       test.done();
     });
@@ -32,7 +32,6 @@ exports['GET /health should return OK'] =function(test) {
   req.end();
 };
 
-var globalTestCount = 2;  //total number of tests.
 var currentExecutedTestCount = 0;
 /*
 This method increments the number of executed tests
