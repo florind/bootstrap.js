@@ -18,6 +18,7 @@ The bootstrapped application adds minimal testing structures for:
 * web service testing
 * Browser-driven testing via zombie
 
+
 The application uses the following modules:
 
 * Express framework for routing http://expressjs.com/
@@ -50,6 +51,7 @@ Cloud deployment
 -------
 
 For cloud deployment one of the following are mandatory:
+
 * A Heroku account (free signup at http://heroku.com) and local connectivity
 * A no.de account (gratis signup at http://no.de) and a provisioned machine 
 
