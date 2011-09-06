@@ -12,13 +12,14 @@ remotely deployed there.
 
 Testing
 -------
-
 The bootstrapped application adds minimal testing structures for:
+
 * Unit tests
 * web service testing
 * Browser-driven testing via zombie
 
 The application uses the following modules:
+
 * Express framework for routing http://expressjs.com/
 * Jade template engine http://jade-lang.com/
 
