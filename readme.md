@@ -59,5 +59,6 @@ Just run:
 
     ./init-webapp.sh target-dir <options>
   
-and at the end of the bootstrap process, a fully functional application skeleton will be ready in target-dir. If one of the supported cloud
-environments is supplied, the app will also be deployed in that environment. 
+and at the end of the bootstraping process, a fully functional application skeleton will be ready in target-dir, on a local git repo and
+(optionally) pushed to the cloud.
+This skeleton should provide enough breadth to start developing your own web app in style.

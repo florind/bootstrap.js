@@ -8,7 +8,7 @@ server.listen(serverPort);
 
 var client = http.createClient(serverPort, 'localhost');
 
-exports['GET nonexistent file should return 404 Not Found'] =function(test) {
+exports['GET nonexistent file should return 404 Not Found'] = function(test) {
   var req = client.request('GET', '/nothing');
   req.on('response', function(res) {
     res.on('end', function() {
@@ -20,7 +20,7 @@ exports['GET nonexistent file should return 404 Not Found'] =function(test) {
   req.end();
 };
 
-exports['GET /health should return OK'] =function(test) {
+exports['GET /health should return OK'] = function(test) {
   var req = client.request('GET', '/health');
   req.on('response', function(res) {
     res.on('end', function() {
