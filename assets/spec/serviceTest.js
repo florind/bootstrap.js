@@ -1,7 +1,7 @@
 var globalTestCount = 2;  //total number of tests. Update if the count changes!!
 
 var http = require('http'),
-  server = require('../controller/rootDispatcher.js').server;
+  server = require('../controllers/rootDispatcher.js').app;
 
 var serverPort = 40101;
 server.listen(serverPort);

@@ -2,7 +2,7 @@ var globalTestCount = 2;  //total number of tests.
 
 var zombie = require('zombie'),
   sys = require('sys'),
-  server = require('../controller/rootDispatcher.js').server;
+  server = require('../controllers/rootDispatcher.js').app;
 
 var serverPort = 40101;
 server.listen(serverPort);
@@ -23,7 +23,7 @@ exports['Page should properly render'] = function(test) {
 };
 
 exports['Website\'s stylesheet should be present'] = function(test) {
-  browser.visit("http://localhost:" + serverPort + "/stylesheet/style.css", function(err, browser, status) {
+  browser.visit("http://localhost:" + serverPort + "/stylesheets/style.css", function(err, browser, status) {
     test.equal(status, 200);
 
     var contentType = browser.response[1]['content-type'];

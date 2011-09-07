@@ -20,17 +20,17 @@ The application uses the following modules:
 
 * Express framework for routing http://expressjs.com/
 * Jade template engine http://jade-lang.com/
-* CSS generator https://github.com/learnboost/stylus
+* Stylus CSS generator https://github.com/learnboost/stylus
 
 Application structure
 -------
 
 The project structure has been inspired by http://stackoverflow.com/questions/5178334/folder-structure-for-a-nodejs-project
 
-    controller/
-    view/               <-- view templates
+    controllers/
+    views/               <-- view templates
     public/             <-- public files
-    public/stylesheet   <-- stylus css files
+    public/stylesheets   <-- stylus css files
     spec/               <-- BDD tests and web service tests
     test/           
     package.json
