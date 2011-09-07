@@ -1,7 +1,6 @@
-var globalTestCount = 2;  //total number of tests.
+var globalTestCount = 3;  //total number of tests. . Update if the count changes!!
 
 var zombie = require('zombie'),
-  sys = require('sys'),
   server = require('../controllers/rootDispatcher.js').app;
 
 var serverPort = 40101;
@@ -20,6 +19,19 @@ exports['Page should properly render'] = function(test) {
     test.done();
     cleanup();
   });
+};
+
+exports['Health check should return OK'] = function(test) {
+  browser.visit("http://localhost:" + serverPort + "/health", function(err, browser, status) {
+    if(err) {
+      console.log(err.message);
+    }
+    test.equal(status, 200);
+    var contentType = browser.response[1]['content-type'];
+    test.equal("application/json; charset=utf-8", contentType);
+    test.done();
+    cleanup();
+  });  
 };
 
 exports['Website\'s stylesheet should be present'] = function(test) {

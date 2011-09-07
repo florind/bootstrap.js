@@ -84,7 +84,7 @@ npm install zombie
 
 #test
 echo "Running tests..."
-node_modules/nodeunit/bin/nodeunit spec/*.js
+node_modules/nodeunit/bin/nodeunit test/*.js spec/*.js
 
 #deploy to heroku
 if [ $HEROKU == true ]; then

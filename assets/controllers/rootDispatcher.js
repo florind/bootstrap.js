@@ -1,5 +1,6 @@
 var express = require('express');
 
+//configuration
 var app = express.createServer();
 app.configure(function() {
   app.set('views', './views');
@@ -21,7 +22,12 @@ app.get('/', function(req, res) {
 
 app.get('/health', function(req, res) {
   //some smart checks should go here
-  res.send('{status: "OK"}', {
-    'Content-Type' : 'text/json'
+  res.send(getHealthCheckJsonBody(), {
+    'Content-Type' : 'application/json'
   }, 200);
 });
+
+function getHealthCheckJsonBody() {
+  return '{"status": "OK"}';
+};
+module.exports.getHealthCheckJsonBody = getHealthCheckJsonBody;

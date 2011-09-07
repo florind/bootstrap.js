@@ -16,11 +16,12 @@ The bootstrapped application adds minimal testing structures for:
 
 Node modules used
 -------
-The application uses the following modules:
+The application uses the following components:
 
 * Express framework for routing http://expressjs.com/
 * Jade template engine http://jade-lang.com/
 * Stylus CSS generator https://github.com/learnboost/stylus
+* JQuery 1.5.2 (zombie barfs when using 1.6.x)
 
 Application structure
 -------
@@ -53,6 +54,9 @@ For cloud deployment one of the following are mandatory:
 
 * A Heroku account (free signup at http://heroku.com) and local connectivity
 * A no.de account (gratis signup at http://no.de) and a provisioned machine 
+
+Note: due to a Heroku limitation, both zombie and nodeunit cannot be installed in that environment and thus they can't be specified in the
+package.json file. The install script adds these two modules separately.
 
 What happens upon install
 -------
