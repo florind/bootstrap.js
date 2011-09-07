@@ -29,13 +29,13 @@ Application structure
 The project structure has been inspired by http://stackoverflow.com/questions/5178334/folder-structure-for-a-nodejs-project
 
     controllers/
-    views/               <-- view templates
-    public/             <-- public files
-    public/stylesheets   <-- stylus css files
-    spec/               <-- BDD tests and web service tests
-    test/           
-    package.json
+    views/                <-- view templates
+    public/               <-- public files
+    public/stylesheets    <-- stylus css files
+    spec/                 <-- BDD tests and web service tests
+    test/                 <-- unit tests
     web.js
+    package.json
 
 To cope with differences between Heroku and no.de deployment reqiurements, some files and config options are redundant in one or the other
 environment (i.e. Procfile is used only by Heroku).
