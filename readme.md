@@ -5,34 +5,33 @@ Bootstraping a node.js web application is easy enough. Bootstrap.js automates th
 Bootstrap.js provides a fast way for developers who want to start with node.js to create a structured node webapp
 and to deploy it in the cloud. Currently supported hosting providers are Heroku and Joyent's no.de. 
 
-What happens upon install
--------
-A complete web application is seeded in the specified target directory. If a cloud environment is specified then the app is 
-remotely deployed there.
-
-Testing
+Testing artifacts
 -------
 The bootstrapped application adds minimal testing structures for:
 
 * Unit tests
-* web service testing
-* Browser-driven testing via zombie
+* Web service testing
+* Browser-driven testing via zombie http://zombie.labnotes.org/
 
 
+Node modules used
+-------
 The application uses the following modules:
 
 * Express framework for routing http://expressjs.com/
 * Jade template engine http://jade-lang.com/
+* CSS generator https://github.com/learnboost/stylus
 
 Application structure
 -------
- 
+
 The project structure has been inspired by http://stackoverflow.com/questions/5178334/folder-structure-for-a-nodejs-project
 
     controller/
-    view/           <-- view templates
-    public/
-    spec/           <-- BDD tests and web service tests here
+    view/               <-- view templates
+    public/             <-- public files
+    public/stylesheet   <-- stylus css files
+    spec/               <-- BDD tests and web service tests
     test/           
     package.json
     web.js
@@ -55,7 +54,12 @@ For cloud deployment one of the following are mandatory:
 * A Heroku account (free signup at http://heroku.com) and local connectivity
 * A no.de account (gratis signup at http://no.de) and a provisioned machine 
 
-Bootstrapping
+What happens upon install
+-------
+A complete web application is seeded in the specified target directory. If a cloud environment is specified then the app is 
+remotely deployed there.
+
+How-to boostrap
 -------
 
 Just run:
@@ -65,3 +69,10 @@ Just run:
 and at the end of the bootstraping process, a fully functional application skeleton will be ready in target-dir, on a local git repo and
 (optionally) pushed to the cloud.
 This skeleton should provide enough breadth to start developing your own web app in style.
+
+Alternatives
+-------
+
+There is at least one other way to create a skeleton node app via expressjs. Here's how to bootstrap an node app with express,
+jade and stylus mixed in:
+    express -t jade -c stylus

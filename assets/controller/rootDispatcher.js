@@ -3,9 +3,15 @@ var http = require('http'),
   jade = require('jade');
 
 var server = express.createServer();
-server.set('views', './view');
-server.set('view engine', 'jade');
-server.use(express.bodyParser());
+server.configure(function() {
+  server.set('views', './view');
+  server.set('view engine', 'jade');
+  server.use(express.bodyParser());
+  server.use(require('stylus').middleware({
+    src: './public'
+  }));
+  server.use(express.static('./public'));
+});
 exports.server = server;
 
 //request router
